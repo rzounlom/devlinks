@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
-        <div>
+        <div className="h-[100vh]">
           <Providers>{children}</Providers>
         </div>
       </body>
