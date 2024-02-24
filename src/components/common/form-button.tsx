@@ -7,18 +7,29 @@ import { useFormStatus } from "react-dom";
 
 interface FormButtonProps extends ButtonProps {
   children: ReactNode;
+  login?: boolean;
 }
 
-const FormButton: FC<FormButtonProps> = ({ children, color, variant }) => {
+const FormButton: FC<FormButtonProps> = ({
+  children,
+  color,
+  variant,
+  login,
+  endContent,
+  startContent,
+}) => {
   const { pending } = useFormStatus();
   return (
     <Button
+      className={`w-full ${login ? "bg-white text-black" : ""}`}
       type="submit"
       color={`${color ? color : "default"}`}
       variant={`${variant ? variant : "solid"}`}
       isLoading={pending}
+      startContent={startContent}
+      endContent={endContent}
     >
-      {children}
+      {pending ? "Loading..." : children}
     </Button>
   );
 };
