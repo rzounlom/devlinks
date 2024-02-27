@@ -6,7 +6,7 @@ interface NavbarMobileProps {}
 
 const NavbarMobile: FC<NavbarMobileProps> = ({}) => {
   return (
-    <div className="h-[74px] p-[16px] flex justify-around items-center">
+    <div className="h-[74px] p-[16px] bg-white flex justify-around items-center">
       <Link href={"/"}>
         <Image
           src={"/img/logo-devlinks-small.svg"}
