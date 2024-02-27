@@ -2,6 +2,7 @@ import * as actions from "@/actions";
 
 import { FC } from "react";
 import FormButton from "@/components/common/form-button";
+import NavbarMobile from "@/components/links/navbar-mobile";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 
@@ -15,7 +16,7 @@ const LinksPage: FC<LinksPageProps> = async ({}) => {
 
   return (
     <div>
-      LinksPage
+      <NavbarMobile />
       <form action={actions.signOut}>
         <FormButton>Sign Out</FormButton>
       </form>
